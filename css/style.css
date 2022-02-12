@@ -1,0 +1,17 @@
+body{
+    background-color: bisque;
+}
+
+#container{
+    height: 490px;
+    width: 490px;
+    background-color: goldenrod;
+}
+
+.game-board{
+    border: 5px solid black;
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+    cursor: pointer;
+}
