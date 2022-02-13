@@ -1,11 +1,46 @@
-const gameBoard = document.querySelector('#game-board')
-const reset = document.querySelector('#reset')
-const moveTracker = ['x', 'o']
-//first step - create a function for when div is clicked
+const gameBoard = document.getElementById('#game-board')
+const reset = document.getElementById('#reset')
+const tile1 = document.getElementById('tile1')
+const container = document.getElementById('container')
+
 // A user should be able to click on different squares to make a move.
-const onClick = () => {
-    console.log("the DOM has loaded")
-}
+
+
+
+// tile1.addEventListener('click', () =>{
+//     const newX = document.createElement('p')
+//     newX.innerHTML = "X"
+//     tile1.appendChild(newX)
+// })
+
+let lastMove = "X";
+
+// loops through child divs of the container
+for (let i = 0; i < container.childNodes.length; i++){
+    const tile = container.childNodes[i]
+    // console.log(tile)
+//  event listener that creates p element for x or 0
+    tile.addEventListener ('click', () =>  {
+        const newNode = document.createElement ('p');
+        //test displayed within newNode
+        newNode.innerHTML = "X"
+        // need to append new node the the correct tile
+        tile.appendChild(newNode)
+        // now I need to make alternations between Xs and 0s
+        if(lastMove === "X"){
+            
+        }
+    })
+    }
+
+
+
+
+
+
+
+
+
 
 
 // Every click will alternate between marking an X and O
@@ -22,10 +57,5 @@ const onClick = () => {
 
 
     
-   //add eventListener to document
-   //wait for the DOM content to load, then make a move
 
-   document.addEventListener('DOMContentLoaded', () =>{
-       onClick()
-   })
 

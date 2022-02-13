@@ -3,8 +3,8 @@ body{
 }
 
 #container{
-    height: 490px;
-    width: 490px;
+    height: 540px;
+    width: 540px;
     background-color: goldenrod;
 }
 
@@ -14,4 +14,10 @@ body{
     width: 150px;
     display: inline-block;
     cursor: pointer;
+    margin: 8px;
+}
+
+p {
+text-align: center;
+    font-size: 80px;
 }
