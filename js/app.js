@@ -30,12 +30,12 @@ let finalMessage = document.getElementById('final-message')
                 if(lastMove === "X"){
                     //add "0" to the board
                     lastMove = "0"
-                    newNode = "0"
+                    // newNode = "0"
                     message.innerHTML = "X just picked. It is 0's turn."
                 }else {
                     //add "X" back to the board
                     lastMove = "X"
-                    newNode =  "X"
+                    // newNode =  "X"
                     message.innerHTML = "0 just picked. It is X's turn."
                 }
             }
@@ -49,7 +49,7 @@ let finalMessage = document.getElementById('final-message')
         reset.addEventListener('click', clearBoard)
     }
     
-    
+    // not best way to go about game ending - was not able to spend a lot of time
     
 //     const tile1 = document.getElementById("tile1");
 //     const tile2 = document.getElementById("tile2");
