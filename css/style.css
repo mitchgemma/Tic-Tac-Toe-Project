@@ -20,6 +20,7 @@ body{
     display: inline-block;
     cursor: pointer;
     margin: 8px;
+    text-align: center;  
 }
 
 p {
