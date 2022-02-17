@@ -55,9 +55,6 @@ reset.addEventListener('click', clearBoard)
 }
 createBoard();
     
-    
-        // determine winning boards
-        // ========================================================================================
         
         const tile1 = document.getElementById("tile1");
         const tile2 = document.getElementById("tile2");
@@ -74,10 +71,9 @@ createBoard();
             if (tile1.firstChild && tile2.firstChild && tile3.firstChild && tile4.firstChild && tile5.firstChild &&
                     tile6.firstChild && tile7.firstChild && tile8.firstChild && tile9.firstChild){
                     finalMessage.innerHTML = "It's a tie!"
-                }
+                }                                
 
-            // const value1 = tile1.firstChild.textContent;
-            // const value2 = tile2.firstChild.textContent;        
+                   
             const disableTiles = () => {
                 const disable1 = document.createElement ('p')
                 disable1.textContent = " "
@@ -116,14 +112,6 @@ createBoard();
                 tile9.appendChild(disable9)
             }
                
-            // const value3 = tile3.firstChild.textContent;
-            // const value4 = tile4.firstChild.textContent;
-            // const value5 = tile5.firstChild.textContent;
-            // const value6 = tile6.firstChild.textContent;
-            // const value7 = tile7.firstChild.textContent;
-            // const value8 = tile8.firstChild.textContent;
-            // const value9 = tile9.firstChild.textContent;
-            // console.log("checking for win")
             if (tile1.firstChild && tile2.firstChild && tile3.firstChild){
                 const value1 = tile1.firstChild.textContent;
                 const value2 = tile2.firstChild.textContent;        
@@ -235,50 +223,5 @@ createBoard();
                     finalMessage.innerHTML = "0 wins!";
                     disableTiles()
                 }
-            }
-
-            // if (tile1.firstChild && tile2.firstChild && tile3.firstChild && tile4.firstChild && tile5.firstChild &&
-            //     tile6.firstChild && tile7.firstChild && tile8.firstChild && tile9.firstChild){
-            //     finalMessage.innerHTML = "It's a tie!"
-            // }
-
-            //function to reset the board
-            
+            }   
         }
-        
-        
-        // function to disable tiles
-        // tile1.removeEventListener("click")
-        // tile2.removeEventListener("click")
-        // tile3.removeEventListener("click")
-        // tile4.removeEventListener("click")
-        // tile5.removeEventListener("click")
-        // tile6.removeEventListener("click")
-        // tile7.removeEventListener("click")
-        // tile8.removeEventListener("click")
-        // tile9.removeEventListener("click")
-        
-
-
-
-
-
-
-
-
-
-    //determine tie
-    //3 end game - tiles can't be clicked
-    
-    //disableTiles()
-    
-    
-    // Every click will alternate between marking an X and O
-    // Upon marking of an individual cell, use JavaScript to add an X or O to the cell, according to whose turn it is.
-    // A cell should not be able to be replayed once marked.
-    // You should not be able to click remaining empty cells after the game is over.
-    // Add a reset button that will clear the contents of the board.
-    // Display a message to indicate which turn is about to be played.
-// Detect draw conditions (ties/cat's game)
-// Detect winner: Stop game and declare the winner if one player ends up getting three in a row.
-// Hint: Determine a set of winning combinations. Check those combinations on the board contents after every move.
